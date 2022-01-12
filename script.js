@@ -49,10 +49,47 @@ for ( i = 0 ; i < BOOKCOLLECTION.length ; i++) {
     const mainDiv = document.createElement("div");
     //  Within that div add another div with the card class
     const cardDiv = document.createElement("div")
-    cardDiv.innerHTML = "lorem ipsum, i love cats and dogs hihi buhu";
     cardDiv.className = "uk-card uk-card-default uk-card-body";
     // Append the cardDiv in the main div (UIKit uses the extra div as margin for some reason)
     mainDiv.appendChild(cardDiv);
+    
+    //add the title  of the book in a H2 & publish date in a badge and append it to the carddiv
+    //Title of the book
+    const h2element = document.createElement("h2");
+    h2element.innerHTML = BOOKCOLLECTION[i].title;
+    h2element.className = "uk-card-title";
+    cardDiv.appendChild(h2element);
+    // Year Published
+    const publishDateBadge = document.createElement("div");
+    publishDateBadge.innerHTML = BOOKCOLLECTION[i].publishYear;
+    publishDateBadge.className = "uk-card-badge uk-label";
+    cardDiv.appendChild(publishDateBadge);
+    // Author
+    const author = document.createElement("p");
+    author.innerHTML = BOOKCOLLECTION[i].author;
+    author.className = "uk-text-meta uk-margin-remove-top"
+    cardDiv.appendChild(author);
+    // Description of the book
+    const summary = document.createElement("p")
+    summary.innerHTML = BOOKCOLLECTION[i].description;
+    cardDiv.appendChild(summary);
+    // Genres
+    const genres = document.createElement("p")
+    genres.innerHTML = "Genres: " + BOOKCOLLECTION[i].genre;
+    genres.className = "uk-text-bold"
+    cardDiv.appendChild(genres);
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
     // get the container element where the cards will be placed and append the new div
     const cardHolder = document.querySelector(".uk-grid-match");
     cardHolder.appendChild(mainDiv);
