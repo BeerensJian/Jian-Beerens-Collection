@@ -9,16 +9,39 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/css/uikit.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="uk-background-primary">
-    <header class="uk-text-center uk-width-3-4 uk-margin-auto">
+<body class="uk-background-primary ">
+    <header class="uk-text-center uk-width-3-4 uk-margin-auto uk-light">
         <h1 class="uk-text-emphasis">Jian's Book collection</h1>
         <p class="uk-text-secondary">Hey and welcome to my special book library which is full of interesting books and some random books cause I couldnt think of anymore books I had read. But all of these books should give you lots of enjoyement and enlightenment. </p>
     </header>
-    <main class="uk-container">
-
+    <main class="uk-section uk-section-primary uk-preserve-color">
+        <section class="uk-container">
+    
+            <div class="uk-panel uk-light uk-margin-medium">
+                <h3>Section Primary with cards</h3>
+            </div>
+    
+            <div class="uk-grid-match uk-child-width-expand@m" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+    
+        </section>
     </main>
+
+
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit-icons.min.js"></script>
+    <!-- My JS -->
+    <script src="./script.js"></script>
 </body>
 </html>
